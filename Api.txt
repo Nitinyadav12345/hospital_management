@@ -1,0 +1,35 @@
+Apis to create in our project
+
+/login --post 
+
+user/updateprofile --update
+
+
+admin/addemployee --post
+--doctor
+--receptionist
+--chemist
+admin/deleteemployee --delete
+admin/expensedetails --get
+
+
+doctor/viewpatient --get 
+doctor/viewappointments --get and update 
+----------------------------------------doctor/viewdiagnosis --get
+doctor/addprescription --post
+
+chemist/viewStock --get
+chemist/addMediciene --post
+chemist/addBill --post
+
+Receptionist/addPatient --post
+Receptionist/DischargePatient --update
+Receptionist/GenrateBill --get
+
+patient/addappoint --post
+patient/viewappointments --get
+patient/viewPrescription --get
+patient/viewBill --get
+
+register
+

@@ -60,6 +60,7 @@ CREATE TABLE PAYMENT
     FOREIGN KEY (PID) REFERENCES PATIENT(PID)
 );
 
+
 CREATE TABLE APPOINTMENT
 (
     APPID INT PRIMARY KEY AUTO_INCREMENT,
@@ -81,3 +82,10 @@ CREATE TABLE MEDICIENE
     DETAILS VARCHAR(100),
     PHOTO VARCHAR(1000)
 );
+
+-- Dummy data for USER table
+INSERT INTO USER (FIRSTNAME, LASTNAME, EMAIL, PASSWORD, PHONE, ROLE, USERPHOTO) VALUES
+('John', 'Doe', 'john.doe@example.com', 'hashed_password_123', '+1234567890', 'patient', 'user_photo_1.jpg'),
+('Jane', 'Smith', 'jane.smith@example.com', 'hashed_password_456', '+1987654321', 'doctor', 'user_photo_2.jpg'),
+('Emily', 'Johnson', 'emily.johnson@example.com', 'hashed_password_789', '+1122334455', 'admin', 'user_photo_3.jpg');
+
