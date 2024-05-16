@@ -74,6 +74,5 @@ router.put('/profile' , (req,res)=>{
     )
 })
 
-//update user set FIRSTNAME = "Nitin" ,LASTNAME = "yadav" ,EMAIL = "test@test.com" ,PASSWORD = "test" ,PHONE= "7599977737" ,ROLE = "plumber" WHERE UID = 
 
 module.exports = router;
