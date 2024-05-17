@@ -34,8 +34,10 @@ app.use((req,res,next)=>{
 })
 
 const userRouter = require('./Routes/user');
-  
+const receptionistRouter = require('./Routes/Receptionist')
+
 app.use('/user' , userRouter);
+app.use('/Receptionist' , receptionistRouter)
 
 app.listen(4000,'0.0.0.0',()=>{
     console.log(`server started on port 4000`)

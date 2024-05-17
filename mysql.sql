@@ -8,9 +8,8 @@ CREATE TABLE USER(
     PASSWORD VARCHAR(1000) NOT NULL,
     PHONE VARCHAR(15) NOT NULL,
     ROLE VARCHAR(15) NOT NULL,
-    USERPHOTO VARCHAR(1000)
+    USERPHOTO VARCHAR(1000)    
 );
-
 
 CREATE TABLE EMPLOYEE
 (
@@ -29,7 +28,6 @@ CREATE TABLE DOCTOR
     DEPARTMENT VARCHAR(100),
     EID INT,
     FOREIGN KEY(EID) REFERENCES EMPLOYEE(EID)
-
 );
 
 CREATE TABLE PATIENT 
@@ -60,7 +58,6 @@ CREATE TABLE PAYMENT
     FOREIGN KEY (PID) REFERENCES PATIENT(PID)
 );
 
-
 CREATE TABLE APPOINTMENT
 (
     APPID INT PRIMARY KEY AUTO_INCREMENT,
@@ -88,4 +85,28 @@ INSERT INTO USER (FIRSTNAME, LASTNAME, EMAIL, PASSWORD, PHONE, ROLE, USERPHOTO) 
 ('John', 'Doe', 'john.doe@example.com', 'hashed_password_123', '+1234567890', 'patient', 'user_photo_1.jpg'),
 ('Jane', 'Smith', 'jane.smith@example.com', 'hashed_password_456', '+1987654321', 'doctor', 'user_photo_2.jpg'),
 ('Emily', 'Johnson', 'emily.johnson@example.com', 'hashed_password_789', '+1122334455', 'admin', 'user_photo_3.jpg');
+
+INSERT INTO EMPLOYEE (DOJ, DOB, SALARY, USERID) VALUES
+('2020-01-15', '1985-07-20', 60000, 2),
+('2021-03-22', '1990-11-30', 50000, 1);
+
+INSERT INTO DOCTOR (CHARGES, DEPARTMENT, EID) VALUES
+('100', 'Cardiology', 1),
+('150', 'Neurology', 2);
+
+INSERT INTO PATIENT (DID, BLOODGROUP, DOB, PRESCRIPTION, PATIENT_PROBLEM, UID, BED_NO, DOA, DOD, IS_ADMIT_P, IS_DOCTOR_VISITED) VALUES
+(1, 'O+', '1995-04-12', 'Take two pills daily', 'High fever', 3, 101, '2023-05-01', NULL, 1, 1),
+(2, 'A+', '1980-08-22', 'Rest and hydration', 'Migraine', 3, 102, '2023-05-05', '2023-05-12', 0, 1);
+
+INSERT INTO PAYMENT (FEES, STATUS, PID, CATEGORY) VALUES
+(200, 'Paid', 1 , 'Consultation'),
+(150, 'Pending', 2, 'Consultation');
+
+INSERT INTO APPOINTMENT (STATUS, APPDATE, DID, PID) VALUES
+('Confirmed', '2023-06-15', 1, 1),
+('Cancelled', '2023-06-20', 2, 2);
+
+INSERT INTO MEDICIENE (NAME, PRICE, QUANTITY, EXPIRYDATE, DETAILS, PHOTO) VALUES
+('Aspirin', 10.50, 100, '2025-01-01', 'Pain reliever', 'path/to/photo4.jpg'),
+('Ibuprofen', 15.00, 200, '2024-12-31', 'Anti-inflammatory', 'path/to/photo5.jpg');
 

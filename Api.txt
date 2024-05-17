@@ -1,7 +1,7 @@
 Apis to create in our project
-
+//------------------Done
 /login --post 
-
+//--------------------Done 
 user/updateprofile --update
 
 
@@ -22,9 +22,12 @@ chemist/viewStock --get
 chemist/addMediciene --post
 chemist/addBill --post
 
+
+//-------------------------Done
 Receptionist/addPatient --post
-Receptionist/DischargePatient --update
+Receptionist/DischargePatient --put
 Receptionist/GenrateBill --get
+
 
 patient/addappoint --post
 patient/viewappointments --get
