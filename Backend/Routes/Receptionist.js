@@ -42,5 +42,4 @@ router.get('/genrateBill' , (req,res)=>{
     )
 });
 
-
 module.exports = router;
