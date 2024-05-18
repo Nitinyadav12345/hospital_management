@@ -18,10 +18,11 @@ doctor/viewappointments --get and update
 ----------------------------------------doctor/viewdiagnosis --get
 doctor/addprescription --post
 
+//------------------------------done 
 chemist/viewStock --get
 chemist/addMediciene --post
 chemist/addBill --post
-
+chemist/updatebillstatus --put;
 
 //-------------------------Done
 Receptionist/addPatient --post
