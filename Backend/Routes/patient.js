@@ -1,16 +1,13 @@
 const express = require('express');
-const { addAppointment } = require('../Controller/patientController');
+const { addAppointment, viewAppointments, viewPrescription, viewBill } = require('../Controller/patientController');
 const router = express.Router();
 
-// patient/addappoint --post
-// patient/viewappointments --get
-// patient/viewPrescription --get
-// patient/viewBill --get
+
 
 router.post('/addappoint' , addAppointment);
-// router.get('/viewappointments')
-// router.get('/viewPrescription')
-// router.get('/viewBill')
+router.get('/viewappointments', viewAppointments)
+router.get('/viewPrescription',viewPrescription)
+router.get('/viewBill',viewBill)
 
 
 module.exports = router;

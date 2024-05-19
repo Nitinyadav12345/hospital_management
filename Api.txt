@@ -29,7 +29,7 @@ Receptionist/addPatient --post
 Receptionist/DischargePatient --put
 Receptionist/GenrateBill --get
 
-
+//----------------------------Done
 patient/addappoint --post
 patient/viewappointments --get
 patient/viewPrescription --get

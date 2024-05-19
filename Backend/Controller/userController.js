@@ -72,6 +72,7 @@ const updateProfile =  (req,res)=>{
     )
 }
 
+
 module.exports = {
     register,
     login,
