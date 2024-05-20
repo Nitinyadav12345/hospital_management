@@ -16,12 +16,13 @@ const userRouter = require('./Routes/user');
 const receptionistRouter = require('./Routes/Receptionist')
 const chemistRouter = require('./Routes/chemist')
 const patientRouter = require('./Routes/patient')
+const adminRouter = require('./Routes/admin')
 
 app.use('/user' , userRouter);
-app.use('/Receptionist' , receptionistRouter)
-app.use('/chemist' ,chemistRouter )
-app.use('/patient' , patientRouter)
-
+app.use('/Receptionist' , receptionistRouter);
+app.use('/chemist' ,chemistRouter );
+app.use('/patient' , patientRouter);
+app.use('/admin',adminRouter);
 
 app.listen(4000,'0.0.0.0',()=>{
     console.log(`server started on port 4000`)

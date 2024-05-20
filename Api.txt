@@ -18,7 +18,7 @@ doctor/viewappointments --get and update
 ----------------------------------------doctor/viewdiagnosis --get
 doctor/addprescription --post
 
-//------------------------------done 
+//------------------------------Done 
 chemist/viewStock --get
 chemist/addMediciene --post
 chemist/addBill --post

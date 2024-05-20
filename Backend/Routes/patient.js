@@ -9,5 +9,4 @@ router.get('/viewappointments', viewAppointments)
 router.get('/viewPrescription',viewPrescription)
 router.get('/viewBill',viewBill)
 
-
 module.exports = router;
