@@ -13,10 +13,10 @@ const autherization = (req,res,next)=>{
         res.send(utils.createErrorResult('missing token'))
       }else{
         try{
-        //console.log(token)
+        console.log(token)
         const payload = jwt.verify(token , config.secret)
         req.userId = payload['id']
-        //console.log(payload)
+        console.log(payload)
         next()
         }catch(ex){
           res.send(utils.createErrorResult('invalid token'))
