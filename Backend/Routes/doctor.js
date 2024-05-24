@@ -11,6 +11,4 @@ router.get('/viewDiagnosis', viewDiagnosis)
 router.post('/addPrescription', addPrescription)
 
 
-
-
 module.exports = router;

@@ -10,7 +10,8 @@ admin/addemployee --post
 --receptionist
 --chemist
 admin/deleteemployee --delete
-admin/expensedetails --get
+admin/deleteDoctor --get
+
 
 
 doctor/viewpatient --get 
