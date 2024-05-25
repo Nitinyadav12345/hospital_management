@@ -59,13 +59,18 @@ const addDoctor = (req,res) => {
     );
 }
 
-const deleteEmployee = (req,res)=>{
-        
+const deleteUser = (req,res)=>{
+    const {id} = req.id;
+    const query = 'delete from user where uid = ?';
+    db.pool.execute(query,[id],(err,result)=>{
+        res.send(utils.createResult(err,result));
+    })
 }
 
 module.exports = {
     addEmployee,
     addDoctor,
+    deleteUser
 }
 
 
@@ -73,3 +78,4 @@ module.exports = {
 // router.post('/addDoctor',)
 // router.delete('deleteEmployee',)
 //  router.get('/expenseDetails',)
+// router.delete('/deleteDoctor')

@@ -1,10 +1,9 @@
 const express = require("express")
-const { addEmployee } = require("../Controller/adminController")
+const { addEmployee, addDoctor, deleteUser } = require("../Controller/adminController")
 const router = express.Router()
 
-router.post('/addEmployee',addEmployee);
-router.post('/addDoctor',addEmployee);
-// router.delete('deleteEmployee',)
-// router.get('/expenseDetails',)
+router.post('/Employee',addEmployee);
+router.post('/Doctor',addDoctor);
+router.delete('/user',deleteUser)
 
 module.exports = router;
