@@ -1,15 +1,15 @@
-
-import Home from '../Components/Home';
-import Login from '../Components/Login';
-import Navbar from '../Components/Navbar';
+import Home from './Pages/Home'
 import './App.css';
+import { Route ,Routes } from 'react-router-dom';
+import Login from './Pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <Login/>
-      <Home/>
+    <div className="App h-screen " data-theme="cupcake" >
+      <Routes>  
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+      </Routes>      
     </div>
   );
 }
