@@ -10,13 +10,13 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className='mx-5'>
       <div className="navbar bg-base-100">
         <div className="flex-1 space-x-5 ml-5">
-          <a className='hover:text-teal-600' href="#">Home</a>
-          <a className='hover:text-teal-600' href="#">Departments</a>
-          <a className='hover:text-teal-600' href="#">Doctors</a>
-          <a className='hover:text-teal-600' href="#">About us</a>
+          <a className='hover:text-teal-600 text-xl font-bold' href="#">Home</a>
+          <a className='hover:text-teal-600 text-xl font-bold' href="#">Departments</a>
+          <a className='hover:text-teal-600 text-xl font-bold' href="#">Doctors</a>
+          <a className='hover:text-teal-600 text-xl font-bold' href="#">About us</a>
         </div>
         <div className="flex-none">
           {profile ? (
@@ -48,11 +48,11 @@ const Navbar = () => {
           ) : (
             <div className="space-x-3">
               <Link className="btn btn-error" to="/login">
-                Login
+                <span className='text-xl font-bold'>Login</span>
               </Link>
-              <button className="btn btn-primary" onClick={toggleProfile}>
-                Register
-              </button>
+              <Link className="btn btn-primary" to="/register">
+                <span className='text-xl font-bold'>Register</span>
+              </Link>
             </div>
           )}
         </div>
