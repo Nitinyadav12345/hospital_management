@@ -11,8 +11,9 @@ const Hero = () => {
           />
         </div>
         <div id="item2" className="carousel-item w-full">
+        
           <img
-            src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src="../../Resources/img1.jpg"
             className="w-full object-cover"
           />
         </div>
