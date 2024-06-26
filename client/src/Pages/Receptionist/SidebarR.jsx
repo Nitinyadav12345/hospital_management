@@ -1,9 +1,12 @@
 import React from "react";
+import { Route,Routes } from "react-router-dom";
 import SidebarMenu from "../../Components/SidebarMenu";
+import AddPatient from "./AddPatient";
+import Discharge from "./Discharge";
 
 const SidebarP = () => {
 
-    const menu = ["Add Patient" ,"Discharge Patient" ,"Genrate Bill"];
+    const menu = [{name:"Add Patient",path:""} ,{name:"Discharge Patient" , path:"dispat"} ];
 
   return (
     <div class="flex h-screen bg-pink-100">
@@ -24,8 +27,8 @@ const SidebarP = () => {
           <nav class="flex-1 px-2 py-4 bg-pink-800">
             
            {
-            menu.map((name)=>{
-                return <SidebarMenu name={name}/>
+            menu.map((obj)=>{
+                return <SidebarMenu name={obj.name}  path={obj.path}/>
             })
            }
           </nav>
@@ -85,6 +88,10 @@ const SidebarP = () => {
         </div>
         <div class="p-4">
          {/* here render the pages  */}
+         <Routes>
+          <Route path="" element={<AddPatient/>}></Route>
+          <Route path="dispat" element={<Discharge/>}></Route>
+         </Routes>
         </div>
       </div>
     </div>

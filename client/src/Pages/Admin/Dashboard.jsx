@@ -86,7 +86,7 @@ const Dashboard = () => {
   ];
   return (
     <div>
-      <div class="grid grid-cols-1 gap-4 px-4 mt-8 sm:grid-cols-4 sm:px-8">
+      <div class="grid grid-cols-1 gap-8  px-4 mt-8 md:grid-cols-2 sm:px-8">
         <div class="flex items-center bg-white border rounded-sm overflow-hidden shadow">
           <div class="p-4 bg-green-400">
             <svg
