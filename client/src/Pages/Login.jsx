@@ -1,40 +1,62 @@
-import React from 'react'
-
+import React from "react";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <>
-        <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-    </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" className="input input-bordered" required />
+      <div class="flex justify-center items-center h-screen p-10 ">
+        <div class="grid md:grid-cols-2 grid-cols-1  border rounded-3xl">
+          <div class="flex justify-center items-center p-5">
+            <form action="">
+              <h1 class="text-center mb-10 font-bold text-4xl">LOGIN HERE</h1>
+              <input
+                type="email"
+                class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3"
+                placeholder="Email"
+              />
+              <input
+                type="Password"
+                class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3"
+                placeholder="Password"
+              />
+              <select
+                id="role"
+                class=" border bg-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5  mb-3"
+              >
+                <option selected>Choose Role</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Patient">Patient</option>
+                <option value="Chemist">Chemist</option>
+                <option value="Admin">Admin</option>
+              </select>
+              <div className="flex">
+                <button
+                  type="submit"
+                  class=" bg-blue-400 hover:bg-blue-500 border outline-none rounded-md py-3 w-full px-4 font-semibold text-white"
+                >
+                  Submit
+                </button>
+                <button
+                  type="submit"
+                  class=" bg-pink-400 hover:bg-pink-500 border outline-none rounded-md py-3 w-full px-4 font-semibold text-white"
+                >
+                  Cancel
+                </button>
+              </div>
+              <span className="text-center">
+                don't have account register
+                <Link to="/register" className="font-bold underline mx-2">
+                  here
+                </Link>
+              </span>
+            </form>
+          </div>
+          <div class="bg-gradient-to-r from-[#E4F9F5] to-[#5038ED] rounded-sm flex  items-center justify-center">
+            <img src="../../Resources/doctor.png" class="rounded-3xl" alt="" />
+          </div>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

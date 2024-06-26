@@ -6,7 +6,7 @@ const Header = () => {
       <div className="navbar bg-base-100">
   <div className="flex-1">
     <a className="btn btn-ghost text-xl">
-    <img className=' w-10' src="https://img.icons8.com/?size=100&id=iQj4ngpeWVYC&format=png&color=000000" alt="logo"  /> 
+    <img className=' w-10' src="../../Resources/logo.png" alt="logo"  /> 
     <span className=' font-extrabold text-2xl'>HMS</span>
     </a>
     
