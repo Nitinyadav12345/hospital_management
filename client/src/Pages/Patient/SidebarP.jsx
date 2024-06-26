@@ -3,16 +3,16 @@ import SidebarMenu from "../../Components/SidebarMenu";
 import { Routes, Route } from "react-router-dom";
 import Appointment from "./Appointment";
 import ScheApp from "./ScheApp";
+import Prescription from "./Prescription";
 
 const SidebarP = () => {
   const menu = [
-    { name: "Schedule appointment", path: "addapp" },
-    { name: "Appointments", path: "app" },
+    { name: "Schedule Appointment", path: "addapp" },
     { name: "Appointment History", path: "history" },
-    { name: "Prescription", path: "addPres" }
+    { name: "Prescription", path: "getpres" }
   ];
 
-  const doctors = [{name:"nitin yadav",id:1},{name:"Saylee",id:2},{name:"aniket",id:3},{name:"Pratmesh",id:4}]
+  
 
   return (
     <div className="flex h-screen bg-pink-100">
@@ -88,8 +88,9 @@ const SidebarP = () => {
         <div className="p-4">
           {/* Render the nested routes */}
           <Routes>
-            <Route path="app" element={<Appointment />} />
+            <Route path="history" element={<Appointment />} />
             <Route path="addapp" element={<ScheApp />} />
+            <Route path="getpres" element={<Prescription />} />
             {/* Add other nested routes here */}
           </Routes>
         </div>
