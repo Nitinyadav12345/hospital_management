@@ -7,7 +7,7 @@ import Prescription from "./Prescription";
 
 const SidebarP = () => {
   const menu = [
-    { name: "Schedule Appointment", path: "addapp" },
+    { name: "Schedule Appointment", path: "" },
     { name: "Appointment History", path: "history" },
     { name: "Prescription", path: "getpres" }
   ];
@@ -89,7 +89,7 @@ const SidebarP = () => {
           {/* Render the nested routes */}
           <Routes>
             <Route path="history" element={<Appointment />} />
-            <Route path="addapp" element={<ScheApp />} />
+            <Route path="" element={<ScheApp />} />
             <Route path="getpres" element={<Prescription />} />
             {/* Add other nested routes here */}
           </Routes>
